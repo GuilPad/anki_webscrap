@@ -18,7 +18,7 @@ driver.implicitly_wait(2)
 for i in range(1,3):
     csv_download=driver.find_element(By.ID, "honbun_list")
     csv_download=csv_download.find_element(By.TAG_NAME, "tbody")
-    
+
     for j in range(1,3):
         element_id = str(j)
         tr_element = csv_download.find_element(By.XPATH, value=f"//tr[@id='{element_id}']/descendant::td[@style='border-bottom: dotted 1pt #85B534']")
